@@ -1,18 +1,10 @@
-local lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
-
-local window = lib:MakeWindow(Name = "Byro Hub", HidePremium = false, SaveConfig = true, ConfigFolder = "OrionTest")
-
-local tab1 = window:MakeTab({
-	Name = "Main",
-	Icon = "rbxassetid://7999345313",
-	PremiumOnly = false
-})
-
-local tab2 = window:MakeTab({
-	Name = "Teleport",
-	Icon = "rbxassetid://7999345313",
-	PremiumOnly = false
-})
+local Lib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = Lib:MakeWindow({
+    Name = "Byro Hub", HidePremium = false, SaveConfig = true,   ConfigFolder = "OrionTest"})
+local tab1 = Window:MakeTab({
+    Name = "Fishing", Icon = "", PremiumOnly = false})
+local tab2 = Window:MakeTab({
+    Name = "Teleport", Icon = "", PremiumOnly = false})
 
 local player = game.Players.LocalPlayer
 
