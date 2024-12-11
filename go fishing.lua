@@ -8,6 +8,16 @@ local tab2 = Window:MakeTab({
 
 local player = game.Players.LocalPlayer
 
+local function antiafk()
+    local VirtualUser = game:GetService("VirtualUser")
+        player.Idled:Connect(function()
+            VirtualUser:CaptureController()
+            VirtualUser:ClickButton2(Vector2.new())
+        end)
+    end
+
+    task.spawn(antiafk)
+    
 tab1:AddToggle({
     Name = "Auto Fish",
     Default = false,
